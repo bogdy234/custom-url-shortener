@@ -8,7 +8,7 @@ router.get(
   asyncMiddleware(async (req, res) => {
     const data = await RedirectService.redirectFunction(req.params);
 
-    return res.redirect(`${data}`);
+    return res.redirect(`https://${data}`);
   })
 );
 

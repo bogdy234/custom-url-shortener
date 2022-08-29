@@ -18,6 +18,7 @@ const getDataForm = async () => {
     console.log(response);
     const json = await response.json();
     const createdUrl = document.querySelector(".createdUrl");
+    console.log(json);
     createdUrl.innerHTML = `<a href='http://localhost:3000/${json.newUrl}' target="_blank">http://localhost:3000/${json.newUrl}</a>`;
   } catch (err) {
     console.error(err);
